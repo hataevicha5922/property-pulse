@@ -1,5 +1,7 @@
 import React, { FC, FunctionComponent, ReactElement, ReactNode } from "react";
 import "@/assets/styles/globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 interface IMainLayout {
   children?: ReactNode;
@@ -14,7 +16,11 @@ export const metadata = {
 const MainLayout: FunctionComponent<IMainLayout> = ({ children }) => {
   return (
     <html lang="eng">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 };
